@@ -13,28 +13,72 @@ body {
   background-color: #fff8f6;
 }
 
-nav ul {
-  list-style-type: none;
-  background-color: rgba(42, 255, 244, 0.273);
-  padding-left: 0px;
+.navbar a, .navbar-list a {
+  text-decoration: none;
+  color: #cc6d4d;
+  margin: 0px;
+  font-size: 18px;
+  display: inline-block;
+  padding: 5px;
 }
 
-nav ul li{
+.navbar a:hover, .navbar-list a:hover {
+  background-color: #eba27a;
+  color: #fff;
+}
+
+.navbar {
+  position: relative;
+  margin: 0 auto; 
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+nav i {
+  font-size: 30px;
+  color: #cc6d4d;
+}
+
+.navbar-list {
+  display: none;
+  list-style: none;
+}
+
+.navbar-list li {
   display: inline;
 }
 
-nav ul li a {
-  display: inline-block;
-  padding: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #303030;
+.navbar-list-mobile {
+  list-style: none;
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 20px;
+  background: #f1f1f1;
+  width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+  top: 45px;
+  left: -140px;
+}
+.navbar:hover .navbar-list-mobile {
+  display: block;
 }
 
-nav ul li a:hover {
-  background-color: aqua;
-  color: white;
+@media all and (min-width: 800px) {
+  header {
+    flex-direction: row;
+  }
+
+  .navbar-list {
+    display: inline-block;
+  }
+
+  .navbar {
+    display: none;
+  }
 }
 
 header {
